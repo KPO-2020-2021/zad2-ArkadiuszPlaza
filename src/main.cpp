@@ -8,7 +8,17 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-
+////////////////////////////////////
+LZespolona ze={5,6}; /*testy*/
+LZespolona ze2={15,62};
+Wyswietl(ze+ze2);
+cout << endl;
+Wyswietl(ze-ze2);
+cout << endl;
+Wyswietl(ze*ze2);
+cout << endl;
+Wyswietl(ze/ze2);
+//////////////////////////////////
   if (argc < 2) {
     cout << endl;
     cout << " Brak opcji okreslajacej rodzaj testu." << endl;
