@@ -1,7 +1,11 @@
-#include "Statystyki.hh"
+#ifndef STATYSTYKA_HH
+#define STATYSTYKA_HH
 
+struct Statystyka
+{
+     int dobre;
+     int zle;
+     int wszystkie;
+};
 
-/*
- * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
- * w pliku naglowkowym.
- */
+#endif
