@@ -89,9 +89,9 @@ TEST_CASE("LZespolona - wyswietlanie zaokraglane") {
     std::cout << out.str() << std::endl;
     CHECK( "(0.67+0.67i)" == out.str() );
 }
-/* nie dzila  test odczytu w out.str znajduje sie wartość bliska zero  e-310 
+/* nie dziala  test odczytu w out.str znajduje sie wartość bliska zero  e-310 
 tak jak by program nie szczytywal danych ze strumienia poprawnie, sprawdziłem swoje
-przeciązenia działają porawnie program po uruchomieniu działa dobrze.
+przeciązenia, działają poprawnie program po uruchomieniu działa dobrze.
 TEST_CASE("LZespolona - wczytywanie standard") {
     LZespolona x;
 

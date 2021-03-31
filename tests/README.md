@@ -1,0 +1,1 @@
+zakomentowane fragmenty w test 2 nie działają i nie potrafie ich naprawic
