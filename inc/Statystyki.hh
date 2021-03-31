@@ -1,13 +1,20 @@
-#ifndef WYRAZENIEZESP_HH
-#define WYRAZENIEZESP_HH
+#ifndef STATYSTYKI_HH
+#define STATYSTYKI_HH
 
 
 
 #include "LZespolona.hh"
 #include "WyrazenieZesp.hh"
 
-/*
- * Tu nalezy zdefiniowac funkcje, ktore definiuja model statystyki 
- */
+struct Statystyka
+{
+     int dobre;
+     int zle;
+     int wszystkie;
+     double procent_dobre;
+     double procent_zle;
+};
 
+void oblicz_procenty(Statystyka &stat);
+void Wyswietl(Statystyka &stat);
 #endif

@@ -5,7 +5,7 @@
  * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
  * w pliku naglowkowym.
  */
- (3+4i)+(5+6i)
+
 void Wyswietl(WyrazenieZesp  WyrZ)
 {
 Wyswietl(WyrZ.Arg1);
@@ -24,7 +24,7 @@ switch(WyrZ.Op)
     cout<<"/";
     break;
 }
-Wyswietl(Wyrz.Arg2);
+Wyswietl(WyrZ.Arg2);
 }
 LZespolona Oblicz(WyrazenieZesp  WyrZ)
 {switch(WyrZ.Op)
@@ -42,7 +42,7 @@ return WyrZ.Arg1/WyrZ.Arg1;
 break; 
 }
 }
-void Wczytaj(WyrazenieZesp WyrZ);
+void Wczytaj(WyrazenieZesp WyrZ)
 {
     Wczytaj (WyrZ.Arg1);
 char Znak;
@@ -63,4 +63,51 @@ switch(Znak)
     break;
 }
 Wczytaj (WyrZ.Arg2);
+}
+ostream & operator<<(ostream & Strm, const WyrazenieZesp WyrZ)
+{
+    Strm<<(WyrZ.Arg1);
+switch(WyrZ.Op)
+{
+    case Op_Dodaj:
+    Strm<<"+";
+    break;
+    case Op_Odejmij:
+    Strm<<"-";
+    break;
+    case Op_Mnoz:
+    Strm<<"*";
+    break;
+    case Op_Dziel:
+    Strm<<"/";
+    break;
+}
+Strm<<(WyrZ.Arg2);
+return Strm;
+}
+istream & operator>>(istream & Strm, WyrazenieZesp &WyrZ)
+{
+     Strm>>(WyrZ.Arg1);
+char Znak;
+Strm>>Znak;
+switch(Znak)
+{
+    case '+':
+    WyrZ.Op = Op_Dodaj;
+    break;
+    case '-':
+    WyrZ.Op = Op_Odejmij;
+    break;
+    case '*':
+    WyrZ.Op = Op_Mnoz;
+    break;
+    case '/':
+    WyrZ.Op = Op_Dziel;
+    break;
+    default: 
+    Strm.setstate(ios::badbit);
+    break;
+}
+Strm>>(WyrZ.Arg2);
+return Strm;
 }

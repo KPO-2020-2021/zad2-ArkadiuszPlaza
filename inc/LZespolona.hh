@@ -2,7 +2,7 @@
 #define LZESPOLONA_HH
 #include <iostream>
 #include <cmath>
-
+#define MAX_B 0.001
 using namespace std;
 /*!
  *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
@@ -19,6 +19,11 @@ struct  LZespolona {
   double   im;    /*! Pole repezentuje czesc urojona. */
 };
 
+
+
+
+bool operator == (LZespolona  Skl1,  LZespolona  Skl2);
+
 void Wyswietl(LZespolona arg);
 void Wczytaj(LZespolona &arg);
 
@@ -34,4 +39,6 @@ double Modul2(LZespolona arg);
 LZespolona operator / (LZespolona Skl1, double Skl2);
 LZespolona operator / (LZespolona Skl1, LZespolona Skl2);
 
+ostream & operator <<(ostream & Strm, const LZespolona arg);
+istream & operator >> (istream & Strm, LZespolona & arg);
 #endif
