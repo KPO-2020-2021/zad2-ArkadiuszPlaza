@@ -1,5 +1,6 @@
 #include "LZespolona.hh"
-
+#define _USE_MATH_DEFINES
+#include <cmath>
 
 
 /*!
@@ -100,3 +101,34 @@ void Wczytaj(LZespolona &arg)
   char Znak;
   cin>>Znak>>arg.re>>arg.im>>Znak>>Znak;
 }
+LZespolona LZespolona::operator +=(LZespolona Skl1)
+{
+  *this=*this+Skl1;
+  return *this;
+}
+LZespolona LZespolona::operator /=(LZespolona Skl1)
+{
+  *this=*this/Skl1;
+  return *this;
+}
+  double LZespolona::arg()
+  {
+    double wynik;
+    if(re>0)
+    {
+      wynik=atan2(im,re) * 180 / M_PI;
+    }
+      else if (re<0)
+    {
+      wynik=atan2(im,re) + M_PI * 180 / M_PI;
+    }
+      else 
+    {
+      throw " argument a jest zero wyjatek";
+    }
+    return wynik;
+    
+  }
+
+
+

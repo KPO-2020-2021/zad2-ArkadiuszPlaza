@@ -41,6 +41,7 @@ case Op_Dziel:
 return WyrZ.Arg1/WyrZ.Arg1;
 break; 
 }
+return WyrZ.Arg1;
 }
 void Wczytaj(WyrazenieZesp WyrZ)
 {

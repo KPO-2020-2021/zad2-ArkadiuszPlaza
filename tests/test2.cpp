@@ -38,6 +38,33 @@ TEST_CASE("LZespolona - dzielenie przez skalar - standardowe 1") {
 
     CHECK((x/t) == y);
 }
+TEST_CASE("LZespolona - dzielenie przez skalar - standardowe 1") {
+    LZespolona x, y,t;
+   
+t.re = 1;
+    t.im = 0;
+    x.re = 2;
+    x.im = 2;
+
+    y.re = 2;
+    y.im = 2;
+
+    CHECK((x/t) == y);
+}
+
+TEST_CASE("LZespolona - dzielenie przez skalar - standardowe 1") {
+    LZespolona x, y,t;
+   
+t.re = 1;
+    t.im = 0;
+    x.re = 2;
+    x.im = 2;
+
+    y.re = 2;
+    y.im = 2;
+x/=t;
+    CHECK(x == y);
+}
 
 TEST_CASE("LZespolona - dzielenie przez skalar - standardowe z przyblizeniem") {
     LZespolona x, y;
@@ -63,6 +90,7 @@ TEST_CASE("LZespolona - dzielenie przez skalar - zero") {
 
    WARN_THROWS(x/t);
 }
+
 
 TEST_CASE("LZespolona - wyswietlanie standard") {
     LZespolona x;

@@ -7,9 +7,14 @@ using namespace std;
 
 
 int main(int argc, char **argv)
-{
+{LZespolona ze={1,2};
+cout<<"1 . "<<ze.arg()<<endl;
+ze={1,0};
+cout<<"2 . "<<ze.arg()<<endl; // 0
+ze={1,1};
+cout<<"3 . "<<ze.arg()<<endl;  //45
 ////////////////////////////////////
-/*LZespolona ze={5,6}; testy
+/* testy
 LZespolona ze2={15,62};
 Wyswietl(ze+ze2);
 cout << endl;

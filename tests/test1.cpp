@@ -91,3 +91,19 @@ TEST_CASE("test LZespolona Roznica"){
 
     CHECK(x-y == z);
 }
+TEST_CASE("test LZespolona Suma")
+{
+    LZespolona x, y, z;
+
+    x.re = 1;
+    x.im = 1;
+
+    y.re = 1;
+    y.im = -3;
+
+    z.re = 2;
+    z.im = -2;
+x+=y;
+    CHECK (x== z);
+}
+

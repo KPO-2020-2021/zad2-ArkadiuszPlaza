@@ -17,6 +17,9 @@ using namespace std;
 struct  LZespolona {
   double   re;    /*! Pole repezentuje czesc rzeczywista. */
   double   im;    /*! Pole repezentuje czesc urojona. */
+  LZespolona operator +=(LZespolona Skl1);
+  LZespolona operator /=(LZespolona Skl1);
+  double arg();
 };
 
 
